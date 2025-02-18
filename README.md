@@ -1,2 +1,1 @@
-# project-chileandataviz
-Chile data visualisation project
+# Chile data visualisation project
