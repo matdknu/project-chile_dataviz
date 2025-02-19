@@ -113,8 +113,10 @@ for (r in nombre_regiones[-10]) {
   cat("OK", fill=T)
 }
 
+getwd()
+
 #guardar como archivo para la posteridad
-save(rios_regiones, file="rios_regiones.rdata")
+save(rios_regiones, file="hidrológico/rios_regiones.rdata")
 #load("rios_regiones.rdata") #para cargar la data una vez que fue generada
 
 
@@ -186,6 +188,8 @@ color3 <- "#CAF0F8"
 grosor1 <- 0.1 #grosor de los ríos
 grosor2 <- 2 #grosor del borde de los ríos (ríos gruesos)
 transparencia1 <- 1 #por si se quiere transparentar los ríos (sale feo)
+
+mapa_chile
 
 #graficar mezclando capas
 mapa_rios <- ggplot() +
