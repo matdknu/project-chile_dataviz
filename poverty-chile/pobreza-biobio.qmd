@@ -1,3 +1,13 @@
+---
+title: "Pobreza"
+format: html
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| warning: false
+#| mesagge: false
 # Cargar paquetes y datos
 #install.packages("geojsonio")
 #install.packages("highcharter")
@@ -38,7 +48,10 @@ pobreza_select_bio <- pobreza_bio %>%
 # Unir datos pobreza con mapa a través del nombre de la comuna
 total_pob <- total_comunas %>% 
   left_join(pobreza_select_bio, by = "nom_comuna")
+```
 
+```{r}
+#| echo: false
 # Highchart
 highchart(type = "map") %>%
   hc_add_series(
@@ -61,3 +74,4 @@ highchart(type = "map") %>%
     text = "Fuente de datos: CASEN 2017 y Shapes Precenso de @robsalasco"
   )
 
+```
